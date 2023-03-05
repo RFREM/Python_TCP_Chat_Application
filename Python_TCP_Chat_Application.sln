@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_TCP_Chat_Application", "Python_TCP_Chat_Application\Python_TCP_Chat_Application.pyproj", "{3C436B04-8BEE-4932-9496-9FC4E9CF6D0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C436B04-8BEE-4932-9496-9FC4E9CF6D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C436B04-8BEE-4932-9496-9FC4E9CF6D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E6D155D-7492-4F56-8D54-E3D0BA78F2CD}
+	EndGlobalSection
+EndGlobal
