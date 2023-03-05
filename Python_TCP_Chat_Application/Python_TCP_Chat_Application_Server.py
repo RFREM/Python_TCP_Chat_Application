@@ -1,6 +1,9 @@
 
 import socket
 import threading
+import subprocess
+
+subprocess.call('start python Python_TCP_Chat_Application_Client.py', shell=True)
 
 hostname=socket.gethostname()   
 IPAddrGET=socket.gethostbyname(hostname) 
@@ -26,6 +29,7 @@ def start_server():
     print (f'Server Address: {IPAddrGET}')
     print (f'Server Address Port: 4545')
     print (f'Server Status: LISTENING')
+
     print (f'------------------------------')
 
     while True:

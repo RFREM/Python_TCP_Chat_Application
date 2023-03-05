@@ -7,10 +7,11 @@
     <StartupFile>Python_TCP_Chat_Application_Server.py</StartupFile>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>.</WorkingDirectory>
+    <WorkingDirectory>C:\Users\ralph\Documents\CSUN 2023 Spring Semester\COMP 429\Project_1\Python_TCP_Chat_Application\Python_TCP_Chat_Application</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python_TCP_Chat_Application</Name>
     <RootNamespace>Python_TCP_Chat_Application</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
