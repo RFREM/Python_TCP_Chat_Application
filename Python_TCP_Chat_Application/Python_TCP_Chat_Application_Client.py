@@ -1,9 +1,6 @@
 
 import socket
 import threading
-import subprocess
-
-subprocess.run(["python", "Python_TCP_Chat_Application_Client.py"])
 
 hostname=socket.gethostname()   
 
