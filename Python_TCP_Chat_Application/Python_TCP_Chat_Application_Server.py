@@ -64,12 +64,6 @@ def handle_client(conn, addr):
         message = input('Enter message: ')
         sendMessage(message, conn)
 
-        # Send the message to all connected clients except the sender
-        for client_conn, client_addr in clients:
-            if client_addr != addr:
-                client_conn.sendall(message.encode())
-           # Prompt the user to enter a message
-
     # Remove the client from the list of connected clients
     clients.remove((conn, addr))
 
@@ -78,8 +72,8 @@ def handle_client(conn, addr):
     print(f'Closed connection with {addr}')
 
 def sendMessage(message, sock):
-   
-    sock.sendall(message.encode())
+ 
+        sock.sendall(message.encode())
 
 if __name__ == '__main__':
     # Create a list to store all client threads
@@ -99,3 +93,5 @@ if __name__ == '__main__':
     # Wait for all client threads to complete
     for client_thread in client_threads:
         client_thread.join()
+
+
