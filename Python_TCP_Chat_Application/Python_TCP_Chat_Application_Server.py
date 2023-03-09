@@ -4,6 +4,7 @@ import threading
 import subprocess
 
 subprocess.call('start python Python_TCP_Chat_Application_Client.py', shell=True)
+subprocess.call('start python Python_TCP_Chat_Application_Client_2.py', shell=True)
 
 hostname=socket.gethostname()   
 IPAddrGET=socket.gethostbyname(hostname) 
