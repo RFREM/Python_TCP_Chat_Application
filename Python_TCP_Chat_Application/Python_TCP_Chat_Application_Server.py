@@ -11,6 +11,8 @@ IPAddrGET=socket.gethostbyname(hostname)
 ServerName = (hostname)
 SERVER_ADDR = (IPAddrGET, 4545)
 
+clientCount = 1
+
 def start_server():
     """Starts the server to listen for incoming connections"""
     # Create a TCP socket
@@ -33,11 +35,17 @@ def start_server():
     print (f'------------------------------')
 
     while True:
+
+        clientCount + 1
+    
         # Accept incoming connections
         conn, addr = server_sock.accept()
 
         # Add the client to the list of connected clients
-        clients.append((conn, addr))
+        clients.append((clientCount, addr))
+
+        for x in range(len(clients)):
+            print (clients[x])
 
         # Start a new thread to handle the client connection
         client_thread = threading.Thread(target=handle_client, args=(conn, addr))
@@ -76,13 +84,13 @@ def sendMessage(message, sock):
         sock.sendall(message.encode())
 
 if __name__ == '__main__':
+
     # Create a list to store all client threads
     client_threads = []
 
     # Create a list to store all connected clients
     clients = []
    
-
     # Start the server and client on separate threads
     server_thread = threading.Thread(target=start_server)
     server_thread.start()
@@ -93,5 +101,3 @@ if __name__ == '__main__':
     # Wait for all client threads to complete
     for client_thread in client_threads:
         client_thread.join()
-
-
