@@ -1,4 +1,5 @@
 
+from re import X
 import socket
 import threading
 import subprocess
@@ -14,6 +15,42 @@ SERVER_ADDR = (IPAddrGET, 4545)
 
 clientCount = 1
 
+def mainMenu():
+    print (f'---------MENU OPTIONS---------')
+    print ("1.HELP"           )
+    print ("2.DISPLAY IP ADDRESS"          )
+    print ("3.DISPLAY PORT NUMBER"        )
+    print ("4.DISPLAY CONNECTIONS" )
+    print ("5.TERMINATE CONNECTION")
+    print ("6.SEND MESSAGE"        )
+    print ("7.EXIT / QUIT"           )
+    print (f'------------------------------')
+
+    choice=int(input())
+    
+    #help Display information about the available user interface options or command manual.  
+    if choice==1:
+       option1()
+    #myip Display the IP address of this process.
+    elif choice==2:
+        option2()
+    #myport Display the port on which this process is listening for incoming connections. 
+    elif choice==3:
+        option3()
+    #list Display a numbered list of all the connections this process is part of
+    elif choice==4:
+        option4()
+    #terminate  <connection  id.>  This  command  will  terminate  the  connection  listed  under  the  specified number  when  LIST  is  used  to  display  all  connections.  E.g.,  terminate  2. 
+    elif choice==5:
+        option5()
+    #send  <connection id.>  <message>  (For example, send 3 Oh! This project is a piece of cake). This will send the message to the host on the connection
+    elif choice==6:
+        option6()
+    else:
+    #exit Close all connections and terminate this process. 
+        option7()
+
+
 def start_server():
     """Starts the server to listen for incoming connections"""
     # Create a TCP socket
@@ -25,14 +62,13 @@ def start_server():
     # Listen for incoming connections
     server_sock.listen()
    
-    print (f'-----------------------------')
+    print (f'\n-----------------------------')
     print (f'       SERVER STARTED')
     print (f' ')
     print (f'Server Host Name: {hostname}')
     print (f'Server Address: {IPAddrGET}')
     print (f'Server Address Port: 4545')
     print (f'Server Status: LISTENING')
-
     print (f'------------------------------')
 
     while True:

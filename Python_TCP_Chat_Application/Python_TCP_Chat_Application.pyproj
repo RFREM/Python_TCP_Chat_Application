@@ -7,7 +7,7 @@
     <StartupFile>Python_TCP_Chat_Application_Server.py</StartupFile>
     <SearchPath>
     </SearchPath>
-    <WorkingDirectory>C:\Users\ralph\Documents\CSUN 2023 Spring Semester\COMP 429\Project_1\Python_TCP_Chat_Application\Python_TCP_Chat_Application</WorkingDirectory>
+    <WorkingDirectory>C:\Users\ralph\source\repos\Python_TCP_Chat_Application\Python_TCP_Chat_Application</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Python_TCP_Chat_Application</Name>
     <RootNamespace>Python_TCP_Chat_Application</RootNamespace>
@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Python_TCP_Chat_Application_Client_2.py" />
     <Compile Include="Python_TCP_Chat_Application_Server.py" />
     <Compile Include="Python_TCP_Chat_Application_Client.py" />
   </ItemGroup>
